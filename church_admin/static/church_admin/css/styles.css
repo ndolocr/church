@@ -1,0 +1,389 @@
+/*
+* Template Name: crndolo personal site
+* Author: crndolo
+* Author URL: http://crndolo.com
+* Version: 1.0
+*/
+
+/* =============================================================================
+
+1.  Fonts
+2.  General Settings
+3.  Header Section
+4.  Site Title & Description
+5.  Profile Picture
+6.  Site Menu
+7.  Social Media
+8.  Index Page
+9.  Form Elements
+10. Portfolio
+
+============================================================================= */
+
+/* ============================================================================= 
+1. Fonts
+============================================================================= */
+
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,400,700");
+
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,latin-ext,cyrillic");
+
+
+/* ============================================================================= 
+2. General Settings
+============================================================================= */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Oswald, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+/* ============================================================================= 
+3. Header Section
+============================================================================= */
+
+.header-section{	
+    background: #272424;
+    background: rgba(39,36,36);
+    border-right: solid 5px #8ca3a3;
+    font-family: Oswald, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+/* ============================================================================= 
+4. Site Title & Description
+============================================================================= */
+.site-title{
+    color: #F1F2F3;
+    color: rgba(241,242,243,1.0);
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.1em;
+    margin: 15px 0 0 0;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(241,242,243,0.5);
+    text-transform: uppercase;    
+}
+
+.site-description{
+    color: #F1F2F3;
+    color: rgba(241,242,243,1.0);
+    font-size: 18px;
+    font-weight: 300;    
+    margin: 10px 0;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);    
+}
+
+/* ============================================================================= 
+5. Profile Picture
+============================================================================= */
+.my-profile-pic{
+    text-align: center;
+    width: 100%;
+}
+
+.my-profile-pic img{	
+    width: 60%;
+    z-index: 0;
+}
+
+/* ============================================================================= 
+6. Site Menu
+============================================================================= */
+.site-menu{
+    border: solid 1px #F1F2F3;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+        
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.site-menu ul{
+    list-style: none;
+}
+
+.menu li a, .menu ul li a{
+    color: #F1F2F3;
+    color: rgba(241,242,243,1.0);
+    display: block;
+    padding: 10px 20px; 
+    text-decoration: none;
+}
+
+.menu li a:hover{
+    background: #585A56;
+    background: rgba(88,90,86,1.0);
+    background: #1995D5;
+    background: rgba(25,149,213,1.0);
+    background: #81A3A7;
+    background: rgba(129,163,167,1.0);    
+    color: #F1F2F3;
+    color: rgba(241,242,243,1.0);
+}
+
+.top-links:hover{
+    background: #1995D5;
+    background: rgba(25,149,213,1.0);
+    background: #81A3A7;
+    background: rgba(129,163,167,1.0);
+}
+
+.top-links{    
+    color: #F1F2F3;
+    color: rgba(241,242,243,1.0);
+    cursor: pointer;
+    padding:10px 20px;    
+}
+
+.menu .right-icon{
+    float: right;
+    margin-left: 10px;
+}
+
+.menu ul{
+    display: none;
+    
+}
+
+.menu ul li a{
+    background: #585A56;
+    background: rgba(88,90,86,1.0);
+    background: #81A3A7;
+    background: rgba(129,163,167,0.7);    
+    border-bottom: 1px solid #fff;
+}
+
+.menu .active{
+    background: #1995D5;
+    background: rgba(25,149,213,1.0);
+    background: #81A3A7;
+    background: rgba(129,163,167,0.7);       
+}
+
+
+.top-links .active{
+    background: #1995D5;
+    background: rgba(25,149,213,1.0);
+    background: #81A3A7;
+    background: rgba(129,163,167,0.7);
+}
+
+/* ============================================================================= 
+7. Social Media
+============================================================================= */
+.social-media{	    
+    margin-bottom: 45px;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.social-media li a{
+    /*color: #81A3A7;
+    color: rgba(129,163,167,0.7);*/
+    font-size: 18px;
+    padding: 7px;
+    text-align: center;    
+}
+
+.social-media li a:hover{
+    background: #272424;
+    background: rgba(39,36,36,1.0);
+    color: #81A3A7;
+    color: rgba(129,163,167,1.0);
+}
+
+.github_account a{
+    color: #211F1F;
+    color: rgba(33,31,31,1.0);
+    color: #FFFFFF;
+    color: rgba(255,255,255,1.0);
+}
+
+.twitter_account a{
+    color: #00ACEE;
+    color: rgba(0,172,238,1.0);
+}
+
+.youtube_account a{
+    color: #FF0000;
+    color: rgba(255,0,0,1.0);
+}
+
+/* ============================================================================= 
+8. Index Page
+============================================================================= */
+
+.main-body-section{
+    background: #F1F2F3;
+    background: rgba(241,242,243,.0.2);
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 50px;
+    padding-top: 20px;
+
+}
+
+.main-body-section-title{
+    background: #C2D3DA;      
+    background: rgba(194, 211, 218, 1.0);
+    display: inline-block;
+    font-weight: 500;
+    line-height: 1.0em;
+    margin: 0 0 0 -55px;
+    padding: 5px 20px 5px 63px;
+    position: relative;
+}
+
+.main-body-section-title h2{
+    color: #F1F2F3;
+    color: rgba(241,242,243,1);
+    font-family: Oswald, Helvetica, sans-serif;
+    font-size: 22px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.main-body-section-about-me{
+    color: #585A56;
+    color: rgba(88,90,86,1.0);
+    font-family: Oswald, Helvetica, sans-serif;        
+}
+
+.main-body-section-about-me h3{
+   line-height: 1.0em;
+   margin-top: 10px;
+   margin-bottom: 5px;
+   text-decoration: underline;
+   text-transform: capitalize;
+}
+
+.main-body-section-about-me p{
+    font-size: 1.0em;
+    margin: 0 0 10px;
+    font-weight: 400;
+}
+
+.what-i-do{	
+    padding-top:20px;
+}
+
+.block-title{
+    border-bottom: solid 2px #C2D3DA;
+    display: inline-block;
+    margin: 0 0 15px;
+    padding-bottom: 1px;
+}
+
+.block-image img{
+    max-width: 120px;
+    max-height: 120px;
+    margin: 0 0 10px;
+}
+
+.block-description{	
+    color: #585A56;
+    color: rgba(88,90,86,1.0);
+    font-family: Oswald, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.block-description h4{ 
+    /*border-bottom: solid 2px #C2D3DA;*/
+    line-height: 1.5em;
+    margin-bottom: 5px;
+    margin-top: 0;    
+    text-align: center;
+}
+
+.block-description p{
+    font-size: 1.0em;
+    margin: 0 0 10px;
+    font-weight: 300;
+}
+
+/* ============================================================================= 
+9. Form Elements
+============================================================================= */
+
+.send-button{
+    background: #F1F2F3;
+    background: rgba(241,242,243,1);
+    border: solid 2px #81A3A7;
+    color: #81A3A7;
+    color: rgba(129,163,167,0.7);
+    font-weight: 600;
+    padding: 10px;
+
+}
+
+.send-button:hover{
+    background: #81A3A7;
+    background: rgba(129,163,167,0.7);
+    color: #ffffff;
+}
+
+
+/* ============================================================================= 
+10. Portfolio
+============================================================================= */
+
+.portfolios{
+    margin-top: 20px;
+}
+
+.portfolios h5{
+    padding-top: 25px;
+}
+
+.ports{		
+    background-position: top;
+    background-size: cover;
+    border: solid 5px #ffffff;
+    box-shadow: 0 20px 30px rgba(0,0,0,.5);
+    height:400px;
+    overflow: hidden;
+    position: relative;
+    transform: translate(-50% -50%);
+    transition: 5s;	
+    width:100%;	
+}
+
+.ports:hover{
+    background-position: bottom;
+}
+
+/*.ports:hover .ports-content{
+    height: 40px;
+}*/
+
+.ports-content{
+    background: rgba(0,0,0,0.4);	
+    bottom: 0;
+    box-shadow: 0 20px 30px rgba(0,0,0,.5);
+    color: #fff;
+    font-family: Oswald, Helvetica, sans-serif;
+    height: 40px;	
+    overflow: hidden;	
+    padding: 10px 0 0 10px;	
+    position: absolute;
+    transition: 0.1s ease;
+    width: 100%;
+}
+
+.web_design_1{
+    background-image: url("../images/web-design/Titanic_Tours_And_Travel_Theme.jpg");	
+}
+
+.web_design_2{
+    background-image: url("../images/web-design/Hikemaniak.jpg");	
+}
