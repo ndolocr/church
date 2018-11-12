@@ -1,0 +1,85 @@
+<!-- BEGIN EXTENDING BASE TEMPLATE -->
+{% extends 'church_admin/base.html' %}
+<!-- END EXTENDING BASE TEMPLATE -->
+
+<!-- BEGIN PAGE TITLE -->
+{% block title %}
+	Service
+{% endblock %}
+<!-- END PAGE TITLE -->
+
+<!-- BEGIN SETTING ACTIVE LINK -->
+{% block services-active %}
+	start active open
+{% endblock %}
+<!-- END SETTING ACTIVE LINK -->
+
+<!-- BEGIN SETTING PAGE BREADCRUMBS -->
+{% block first_breadcrum %}  
+	<a href="{% url 'all-services' %}"> Service </a>
+{% endblock %}
+
+{% block second_breadcrum %}  
+	View All Records
+{% endblock %}
+<!-- END SETTING PAGE BREADCRUMBS -->
+
+<!-- BEGIN SETTING PAGE TITLE -->
+{% block page-title %} 
+	Service
+{% endblock %}
+<!-- END SETTING PAGE TITLE -->
+
+<!-- BEGIN PAGE CONTENT -->
+{% block small-page-title %} 
+	View All
+{% endblock %}
+
+{% block body %}
+	<!-- BEGIN ROW -->
+	<div class="row">
+		
+		<!-- BEGIN COL -->
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			
+			<!-- BEGIN TABLE -->
+			<table class="table table-striped">
+				
+				<thead>
+                    <tr>
+                        <th> Service </th>  
+                        <th> Time </th>
+                        <th> Created By </th>   
+                        <th> Edit </th>
+                        <th> Delete </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                	{% if all_services %}
+                		{% for service in all_services %}
+	                		<tr>
+	                			<td> {{service.service_name}} </td>
+	                			<td> {{service.service_time}} </td>
+	                			<td> {{service.created_by}} </td>
+	                			<td> <a href="" class='btn green btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a> </td>
+	                			<td> <a href="" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a> </td>
+	                		</tr>
+                		{% endfor %}
+            		{% else %}
+            			<tr>
+            				<td colspan="5"> <h3> No Service Records Available! </h3> </td>
+            			</tr>
+        			{% endif %}
+                </tbody>
+
+			</table>
+			<!-- END TABLE -->
+
+		</div>
+		<!-- END COL -->
+
+  	</div>
+  	<!-- END ROW -->
+{% endblock %}
+<!-- END PAGE CONTENT -->

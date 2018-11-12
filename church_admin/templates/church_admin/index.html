@@ -1,9 +1,41 @@
+<!-- BEGIN EXTENDING BASE TEMPLATE -->
 {% extends 'church_admin/base.html' %}
+<!-- END EXTENDING BASE TEMPLATE -->
 
+<!-- BEGIN PAGE TITLE -->
 {% block title %}
 	St. Marys ACK
 {% endblock %}
+<!-- END PAGE TITLE -->
 
-{% block body %}
-	
+<!-- BEGIN SETTING ACTIVE LINK -->
+{% block dashboard-active %}
+	start active open
 {% endblock %}
+<!-- END SETTING ACTIVE LINK -->
+
+<!-- BEGIN SETTING PAGE BREADCRUMBS -->
+{% block first_breadcrum %}  
+	<a href=""> Home </a>
+{% endblock %}
+
+{% block second_breadcrum %}  
+	Dashboard
+{% endblock %}
+<!-- END SETTING PAGE BREADCRUMBS -->
+
+<!-- BEGIN SETTING PAGE TITLE -->
+{% block page-title %} 
+	Dashboard
+{% endblock %}
+
+{% block small-page-title %} 
+	Home
+{% endblock %}
+<!-- END SETTING PAGE TITLE -->
+
+<!-- BEGIN PAGE CONTENT -->
+{% block body %}
+
+{% endblock %}
+<!-- END PAGE CONTENT -->

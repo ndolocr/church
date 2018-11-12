@@ -1,0 +1,85 @@
+<!-- BEGIN EXTENDING BASE TEMPLATE -->
+{% extends 'church_admin/base.html' %}
+<!-- END EXTENDING BASE TEMPLATE -->
+
+<!-- BEGIN PAGE TITLE -->
+{% block title %}
+	Contribution Type
+{% endblock %}
+<!-- END PAGE TITLE -->
+
+<!-- BEGIN SETTING ACTIVE LINK -->
+{% block contribution-type-active %}
+	start active open
+{% endblock %}
+<!-- END SETTING ACTIVE LINK -->
+
+<!-- BEGIN SETTING PAGE BREADCRUMBS -->
+{% block first_breadcrum %}  
+	<a href="{% url 'all-contribution-types' %}"> Contribution Type </a>
+{% endblock %}
+
+{% block second_breadcrum %}  
+	View All Records
+{% endblock %}
+<!-- END SETTING PAGE BREADCRUMBS -->
+
+<!-- BEGIN SETTING PAGE TITLE -->
+{% block page-title %} 
+	Contribution Type
+{% endblock %}
+<!-- END SETTING PAGE TITLE -->
+
+<!-- BEGIN PAGE CONTENT -->
+{% block small-page-title %} 
+	View All
+{% endblock %}
+
+{% block body %}
+	<!-- BEGIN ROW -->
+	<div class="row">
+		
+		<!-- BEGIN COL -->
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			
+			<!-- BEGIN TABLE -->
+			<table class="table table-striped">
+				
+				<thead>
+                    <tr>
+                        <th> Contribution Type </th>  
+                        <th> Created On </th>
+                        <th> Created By </th>   
+                        <th> Edit </th>
+                        <th> Delete </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                	{% if all_contribution_types %}
+                		{% for contribution_type in all_contribution_types %}
+	                		<tr>
+	                			<td> {{contribution_type.contribution_type}} </td>
+	                			<td> {{contribution_type.created_on}} </td>
+	                			<td> {{contribution_type.created_by}} </td>
+	                			<td> <a href="" class='btn green btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a> </td>
+	                			<td> <a href="" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a> </td>
+	                		</tr>
+                		{% endfor %}
+            		{% else %}
+            			<tr>
+            				<td colspan="5"> <h3> No Contribution Type Records Available! </h3> </td>
+            			</tr>
+        			{% endif %}
+                </tbody>
+
+			</table>
+			<!-- END TABLE -->
+
+		</div>
+		<!-- END COL -->
+
+  	</div>
+  	<!-- END ROW -->
+{% endblock %}
+<!-- END PAGE CONTENT -->

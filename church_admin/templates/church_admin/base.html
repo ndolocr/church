@@ -57,7 +57,7 @@
             <div class="page-header-inner ">
                 <!-- BEGIN LOGO -->
                 <div class="page-logo">
-                    <a href="index.html">
+                    <a href="{% url 'admin-home' %}">
                         <img src="{% static 'church_admin/images/logo/logo-6.png' %}" height="16px;" alt="logo" class="logo-default" /> </a>
                     <div class="menu-toggler sidebar-toggler"> </div>
                 </div>
@@ -458,12 +458,11 @@
                             </form>
                             <!-- END RESPONSIVE QUICK SEARCH FORM -->
                         </li>
-                        <li class="nav-item start active open">
-                            <a href="javascript:;" class="nav-link nav-toggle">
+                        <li class="nav-item {% block dashboard-active %} {% endblock %}">
+                            <a href="{% url 'admin-home' %}" class="nav-link nav-toggle">
                                 <i class="icon-home"></i>
                                 <span class="title">Dashboard</span>
-                                <span class="selected"></span>
-                                <span class="arrow open"></span>
+                                <span class="selected"></span>                                
                             </a>
                             
                         </li>
@@ -474,7 +473,7 @@
                         </li>
 
                         <!-- BEGIN MINISTRY  -->
-                        <li class="nav-item  ">
+                        <li class="nav-item  {% block ministry-active %} {% endblock %}">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="fa fa-crosshairs"></i>
                                 <span class="title">Ministry</span>
@@ -487,7 +486,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="#" class="nav-link ">
+                                    <a href="{% url 'all-ministries' %}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                
@@ -496,7 +495,7 @@
                         <!-- END MINISTRY -->
 
                         <!-- BEGIN PASTORAL GROUP  -->
-                        <li class="nav-item  ">
+                        <li class="nav-item {% block pastoral-group-active %} {% endblock %} ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="fa fa-crosshairs"></i>
                                 <span class="title">Pastoral Group</span>
@@ -509,7 +508,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="#" class="nav-link ">
+                                    <a href="{% url 'all-pastoral-groups' %}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                
@@ -526,7 +525,7 @@
                         </li>
 
                         <!-- BEGIN CHURCH ATTENDANCE  -->
-                        <li class="nav-item  ">
+                        <li class="nav-item {% block church-attendance-active %} {% endblock %} ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="icon-users"></i>
                                 <span class="title">Church Attendance</span>
@@ -539,7 +538,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="#" class="nav-link ">
+                                    <a href="{% url 'all-church-attendances' %}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                
@@ -548,7 +547,7 @@
                         <!-- END CHURCH ATTENDANCE -->
 
                         <!-- BEGIN SERVICES  -->
-                        <li class="nav-item  ">
+                        <li class="nav-item {% block services-active %} {% endblock %} ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="fa fa-crosshairs"></i>
                                 <span class="title">Services</span>
@@ -561,7 +560,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="#" class="nav-link ">
+                                    <a href="{% url 'all-services' %}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                
@@ -578,7 +577,7 @@
                         </li>
 
                         <!-- BEGIN CONTRIBUTION TYPE  -->
-                        <li class="nav-item  ">
+                        <li class="nav-item {% block contribution-type-active %} {% endblock %} ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="fa fa-money"></i>
                                 <span class="title">Contribution Type</span>
@@ -591,7 +590,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="#" class="nav-link ">
+                                    <a href="{% url 'all-contribution-types' %}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                
@@ -600,7 +599,7 @@
                         <!-- END CONTRIBUTION TYPE -->
 
                         <!-- BEGIN CONTRIBUTION  -->
-                        <li class="nav-item  ">
+                        <li class="nav-item {% block contribution-active %} {% endblock %} ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="icon-wallet"></i>
                                 <span class="title">Contributions</span>
@@ -613,7 +612,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="#" class="nav-link ">
+                                    <a href="{% url 'all-contributions' %}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                
@@ -629,7 +628,7 @@
                         </li>
 
                         <!-- BEGIN INCOME  -->
-                        <li class="nav-item  ">
+                        <li class="nav-item {% block income-active %} {% endblock %} ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="fa fa-bank"></i>
                                 <span class="title">Income</span>
@@ -642,7 +641,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="#" class="nav-link ">
+                                    <a href="{% url 'all-incomes' %}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                
@@ -651,7 +650,7 @@
                         <!-- END INCOME -->
 
                         <!-- BEGIN EXPENSES  -->
-                        <li class="nav-item  ">
+                        <li class="nav-item {% block expenses-active %} {% endblock %} ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="fa fa-remove"></i>
                                 <span class="title">Expenses</span>
@@ -664,7 +663,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="#" class="nav-link ">
+                                    <a href="{% url 'all-expenses' %}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                
@@ -680,7 +679,7 @@
                         </li>
 
                         <!-- BEGIN EVENTS  -->
-                        <li class="nav-item  ">
+                        <li class="nav-item {% block events-active %} {% endblock %} ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="fa fa-map-pin"></i>
                                 <span class="title">Events</span>
@@ -693,7 +692,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="#" class="nav-link ">
+                                    <a href="{% url 'all-events' %}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                
@@ -702,7 +701,7 @@
                         <!-- END EVENTS -->
 
                         <!-- BEGIN TEXT MESSAGE  -->
-                        <li class="nav-item  ">
+                        <li class="nav-item {% block text-message-active %} {% endblock %} ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="fa fa-envelope-o"></i>
                                 <span class="title">Text Message</span>
@@ -731,7 +730,7 @@
                         </li>
 
                         <!-- BEGIN REPORTS  -->
-                        <li class="nav-item  ">
+                        <li class="nav-item {% block reports-active %} {% endblock %} ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="fa fa-file-text"></i>
                                 <span class="title">Reports</span>
@@ -798,12 +797,31 @@
                 <div class="page-content">
                     <!-- BEGIN PAGE HEADER-->
                     <!-- BEGIN THEME PANEL -->
+                    <!-- BEGIN PAGE BAR -->
+                    <div class="page-bar">
+                        <ul class="page-breadcrumb">
+                            <li>
+                                {% block first_breadcrum %}  {% endblock %}
+                                <i class="fa fa-circle"></i>
+                            </li>
+                            <li>
+                                <span>{% block second_breadcrum %}  {% endblock %}</span>
+                            </li>
+                        </ul>                
+                    </div> 
+                    <!-- END PAGE BAR -->
 
-            <!-- ADDITIONAL BODY BLOCK FROM DIFFERENT PAGES -->
-	    	{% block body %}	    	
-	    	
-	    	{% endblock %}
-	    	<!-- END OF ADDITIONAL PAGES SECTION -->
+                    <!-- BEGIN PAGE TITLE-->
+                    <h3 class="page-title"> {% block page-title %} {% endblock %}
+                        <small>{% block small-page-title %} {% endblock %}</small>                    
+                    </h3>
+                    <!-- END PAGE TITLE-->
+
+                    <!-- ADDITIONAL BODY BLOCK FROM DIFFERENT PAGES -->
+        	    	{% block body %}	    	
+        	    	
+        	    	{% endblock %}
+        	    	<!-- END OF ADDITIONAL PAGES SECTION -->
 
 	    		</div>
     		</div>
