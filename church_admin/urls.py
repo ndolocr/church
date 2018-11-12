@@ -8,14 +8,18 @@ urlpatterns = [
     url(r'^event/$', views.events_view_all, name='all-events'),
     #/church_admin/income
     url(r'^income/$', views.incomes_view_all, name='all-incomes'),
+    #/church_admin/member
+    url(r'^member/$', views.members_view_all, name='all-members'),
     #/church_admin/expense
     url(r'^expense/$', views.expenses_view_all, name='all-expenses'),
     #/church_admin/service
-    url(r'^service/$', views.services_view_all, name='all-services'),
+    url(r'^service/$', views.services_view_all, name='all-services'),    
     #/church_admin/ministry
     url(r'^ministry/$', views.ministries_view_all, name='all-ministries'),   
     #/church_admin/contribution
     url(r'^contribution/$', views.contributions_view_all, name='all-contributions'), 
+    #/church_admin/administrator
+    url(r'^administrator/$', views.administrators_view_all, name='all-administrator'),
     #/church_admin/pastoral_group
     url(r'^pastoral_group/$', views.pastoral_groups_view_all, name='all-pastoral-groups'),    
     #/church_admin/church_attendance

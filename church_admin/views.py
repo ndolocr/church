@@ -1,6 +1,9 @@
 from django.template import loader
 from django.shortcuts import render 
 from django.http import HttpResponse
+
+from accounts.models import User
+from accounts.models import Member
 from church_admin.models import Event
 from church_admin.models import Income
 from church_admin.models import Expense
@@ -12,6 +15,17 @@ from church_admin.models import ChurchAttendance
 from church_admin.models import ContributionType
 
 # Create your views here.
+
+def members_view_all(request):
+	all_members = Member.objects.all()
+	all_users = User.objects.all()
+	context = {'all_members': all_members, 'all_users': all_users}
+	return render(request, 'church_admin/all_members.html', context)
+
+def administrators_view_all(request):
+	all_users = User.objects.all()
+	context = {'all_users': all_users}
+	return render(request, 'church_admin/all_admins.html', context)
 
 def index(request):
 	return render(request, 'church_admin/index.html')

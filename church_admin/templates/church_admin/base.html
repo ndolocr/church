@@ -467,6 +467,57 @@
                             
                         </li>
                         
+                        <!-- USERS -->
+                        <li class="heading">
+                            <h3 class="uppercase">Users</h3>
+                        </li>
+
+                        <!-- BEGIN ADMINISTRATOR  -->
+                        <li class="nav-item {% block admin-active %} {% endblock %} ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-user"></i>
+                                <span class="title">Administrator</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">Add Administrator</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a href="{% url 'all-administrator' %}" class="nav-link ">
+                                        <span class="title">View All</span>
+                                    </a>
+                                </li>                                
+                            </ul>
+                        </li>
+                        <!-- END ADMINISTRATOR -->
+
+                        <!-- BEGIN MEMBERS  -->
+                        <li class="nav-item {% block member-active %} {% endblock %} ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-users"></i>
+                                <span class="title">Members</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">Add Members</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="{% url 'all-members' %}" class="nav-link ">
+                                        <span class="title">View All</span>
+                                    </a>
+                                </li>                                
+                            </ul>
+                        </li>
+                        <!-- END MEMBERS -->
+
+                        <!-- END USERS -->
+
                         <!-- BEGIN CHURCH GROUPS -->
                         <li class="heading">
                             <h3 class="uppercase">Church Groups</h3>

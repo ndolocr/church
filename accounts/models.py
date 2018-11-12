@@ -317,7 +317,7 @@ class Member(models.Model):
     middle_name = models.CharField(_('Middle Name'), max_length=100, blank=True, null=True)
     date_of_birth = models.DateField(_('Date of Birth'), blank=True, null=True)
     gender = models.CharField(_('Gender'), max_length=6, choices=GENDER_CHOICES)
-    country_code = models.CharField(_('Country Code'), max_length=100, choices=COUNTRY_CODE_CHOICES, default='Kenya (+254)')
+    country_code = models.CharField(_('Country Code'), max_length=100, choices=COUNTRY_CODE_CHOICES, default='+254')
     phone_number = models.PositiveIntegerField(_('Phone Number'))
     baptised = models.CharField(_('Baptised'), max_length=3, choices=YES_NO_CHOICES, default='No')
     confirmed = models.CharField(_('Comfirmed Member'), max_length=15, choices=YES_NO_NOT_APPLICABLE_CHOICES, default='No')
@@ -334,6 +334,7 @@ class Member(models.Model):
         verbose_name_plural = 'Members'
 
     def __str__(self):
-        return self.registration_number
+        full_name = self.user.first_name +' '+ self.middle_name +' '+self.user.last_name
+        return self.registration_number+ ' - ' + full_name
     
 
